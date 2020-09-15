@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import unittest
 
+from deprecated import deprecated
+
 from yandex_checkout.domain.common.payment_method_type import PaymentMethodType
 from yandex_checkout.domain.models.currency import Currency
 from yandex_checkout.domain.models.payment_data.card_type import CardType
@@ -309,6 +311,7 @@ class TestPaymentData(unittest.TestCase):
         payment_data = ResponsePaymentDataPsb()
         self.assertEqual({'type': PaymentMethodType.PSB}, dict(payment_data))
 
+    @deprecated("This method will be removed in one of future versions")
     def test_wechat_cast(self):
         payment_data = RequestPaymentDataWechat()
         payment_data.type = PaymentMethodType.WECHAT
