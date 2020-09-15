@@ -45,4 +45,4 @@ from yandex_checkout.refund import Refund
 from yandex_checkout.settings import Settings
 from yandex_checkout.webhook import Webhook
 
-__version__ = '1.6.3'
+__version__ = '1.6.4'
