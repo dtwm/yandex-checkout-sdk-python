@@ -54,7 +54,8 @@ class ApiClient:
                                        self.endpoint + path,
                                        params=query_params,
                                        headers=request_headers,
-                                       json=body)
+                                       json=body,
+                                       timeout=self.timeout)
         return raw_response
 
     def get_session(self):
